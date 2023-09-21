@@ -64,6 +64,12 @@ section {
     margin-bottom: 20px;
 }
 
+/* CSS untuk gambar */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 footer {
     text-align: center;
     padding: 20px;
