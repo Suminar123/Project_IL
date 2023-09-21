@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Beranda - Website tentang Indonesia</title>
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di Indopedia</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="sejarah.html">Sejarah</a></li>
+            <li><a href="budaya.html">Budaya</a></li>
+            <li><a href="pariwisata.html">Pariwisata</a></li>
+            <li><a href="berita.html">Berita</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Selamat Datang di Beranda</h2>
+            <p>Selamat datang di halaman beranda dari website tentang Indonesia. Di sini Anda akan menemukan informasi menarik tentang negara ini.</p>
+        </section>
+        
+        <section>
+            <h2>Sejarah Indonesia</h2>
+            <p>Indonesia, secara resmi dikenal sebagai Republik Indonesia atau lengkapnya Negara Kesatuan Republik Indonesia, adalah sebuah negara kepulauan yang terletak di Asia Tenggara. Negara ini melintasi garis khatulistiwa dan terletak di antara daratan Asia dan Oseania, sehingga sering disebut sebagai negara yang berada di antara dua benua, serta diapit oleh Samudra Pasifik dan Samudra Hindia. Indonesia merupakan negara terluas ke-14 di dunia, dan juga merupakan negara kepulauan terbesar dengan luas wilayah sekitar 1.904.569 kilometer persegi. Indonesia juga memiliki pulau terbanyak ke-6 di dunia, dengan jumlah mencapai 17.504 pulau. Kepulauan Indonesia sering disebut dengan sebutan Nusantara.</p>
+            <img src="gambar/idn.jpg" alt="Pemandangan alam Indonesia" width="735" height="390">
+        </section>
+
+        <section>
+            <h2>Keindahan Alam</h2>
+            <p>Indonesia dikenal dengan keindahan alamnya yang memukau. Dari pantai-pantai pasir putih hingga hutan hujan tropis, kekayaan alamnya tak tertandingi.</p>
+            <img src="gambar/alam.jpg" alt="Pemandangan alam Indonesia" width="735" height="390">
+        </section>
+
+        <section>
+            <h2>Keanekaragaman Budaya</h2>
+            <p>Indonesia memiliki sekitar 300 kelompok etnis, tiap etnis memiliki warisan budaya yang berkembang selama berabad-abad, dipengaruhi oleh kebudayaan India, Arab, Tiongkok, Eropa, dan termasuk kebudayaan sendiri yaitu Melayu. Contohnya tarian Jawa dan Bali tradisional memiliki aspek budaya dan mitologi Hindu, seperti Wayang Kulit yang menampilkan kisah-kisah tentang kejadian mitologis Hindu Ramayana dan Baratayuda. Banyak juga seni tari yang berisikan nilai-nilai Islam. Beberapa di antaranya dapat ditemukan di daerah Sumatra seperti tari Ratéb Meuseukat, Tari Saman, dan tari Seudati dari Aceh.</p>
+            <img src="gambar/budaya.jpg" alt="Tarian tradisional Indonesia" width="735" height="390">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Indopedia</p>
+    </footer>
+
+    <script>
+        // Fungsi untuk mengarahkan ke halaman yang sesuai saat tautan navigasi diklik
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const pageUrl = this.getAttribute('href');
+                window.location.href = pageUrl;
+            });
+        });
+    </script>
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "43632ed2-e414-420f-abca-17ad97935e4f", // The ID of this integration.
+          region: "us-south", // The region your integration is hosted in.
+          serviceInstanceID: "1cb8a7c2-04ab-4cc3-9ae2-73167b79878f", // The ID of your service instance.
+          onLoad: function(instance) { instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
+</body>
+</html>

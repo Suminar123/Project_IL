@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Berita - Website tentang Indonesia</title>
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di Indopedia</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="sejarah.html">Sejarah</a></li>
+            <li><a href="budaya.html">Budaya</a></li>
+            <li><a href="pariwisata.html">Pariwisata</a></li>
+            <li><a href="berita.html">Berita</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Berita Terkini</h2>
+            <p>Dapatkan berita terkini tentang Indonesia, termasuk perkembangan politik, budaya, dan pariwisata.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Indopedia</p>
+    </footer>
+    <script>
+        window.watsonAssistantChatOptions = {
+          integrationID: "43632ed2-e414-420f-abca-17ad97935e4f", // The ID of this integration.
+          region: "us-south", // The region your integration is hosted in.
+          serviceInstanceID: "1cb8a7c2-04ab-4cc3-9ae2-73167b79878f", // The ID of your service instance.
+          onLoad: function(instance) { instance.render(); }
+        };
+        setTimeout(function(){
+          const t=document.createElement('script');
+          t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+          document.head.appendChild(t);
+        });
+      </script>
+</body>
+</html>
